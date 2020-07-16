@@ -1,0 +1,15 @@
+# dependencies
+/node_modules/
+
+# compiled
+/bin/
+/dist/
+
+# test outputs
+/test-results.xml
+
+# tmp
+/tmp/
+/coverage
+*.log
+*.swp

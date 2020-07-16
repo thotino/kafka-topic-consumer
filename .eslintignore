@@ -1,0 +1,15 @@
+# dependencies
+/node_modules/
+
+# compiled
+/bin/
+/dist/
+
+# compiled doc
+/doc/**/
+
+
+# misc
+**.log
+/tmp/
+/package-lock.json

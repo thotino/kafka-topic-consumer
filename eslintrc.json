@@ -1,0 +1,245 @@
+{
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "no-cond-assign": [2, "except-parens"],
+    "no-console": 1,
+    "no-constant-condition": [2, {"checkLoops": false}],
+    "no-control-regex": 0,
+    "no-debugger": 2,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty-character-class": 2,
+    "no-empty": 2,
+    "no-ex-assign": 2,
+    "no-extra-boolean-cast": 2,
+    "no-extra-parens": [1, "all", {"conditionalAssign": false, "returnAssign": false, "nestedBinaryExpressions": false}],
+    "no-extra-semi": 2,
+    "no-func-assign": 2,
+    "no-inner-declarations": 2,
+    "no-invalid-regexp": 2,
+    "no-irregular-whitespace": [2, {"skipStrings": true, "skipTemplates": true, "skipRegExps": true}],
+    "no-obj-calls": 2,
+    "no-prototype-builtins": 0,
+    "no-regex-spaces": 2,
+    "no-sparse-arrays": 1,
+    "no-template-curly-in-string": 1, //bugged at the moment, set back to 2 later
+    "no-unexpected-multiline": 2,
+    "no-unreachable": 2,
+    "no-unsafe-finally": 2,
+    "no-unsafe-negation": 2, //bugged at the moment, set back to 2 later
+    "use-isnan": 2,
+    "valid-typeof": 2,
+  
+    "accessor-pairs": [2, {"setWithoutGet": true, "getWithoutSet": false}],
+    "array-callback-return": 1,
+    "block-scoped-var": 2,
+    "class-methods-use-this": 0, //bugged at the moment, set back to 1 later
+    "complexity": [1, 10],
+    "consistent-return": [0],  // !!!!!!!!!!!!!!!!!!!!!!!!
+    "curly": [2, "all"],
+    "default-case": 2,
+    "dot-location": [2, "property"],
+    "dot-notation": 2,
+    "eqeqeq": [1, "smart"],
+    "guard-for-in": 2,
+    "no-alert": 2,
+    "no-caller": 2,
+    "no-case-declarations": 2,
+    "no-div-regex": 2,
+    "no-else-return": 2,
+    "no-empty-function": 2,
+    "no-empty-pattern": 2,
+    "no-eq-null": 2,
+    "no-eval": 2,
+    "no-extend-native": 2, //disable it explicitely in the few modules that are expected to extend natives
+    "no-extra-bind": 2,
+    "no-extra-label": 2,
+    "no-fallthrough": [2, { "commentPattern": "next" }],
+    "no-floating-decimal": 2,
+    "no-global-assign": 0, //bugged at the moment, set back to 2 later
+    "no-implicit-coercion": 2,
+    "no-implicit-globals": 2,
+    "no-implied-eval": 2,
+    "no-invalid-this": 0, //should be 2 but conflits with ember computeds
+    "func-style": 0,
+    "no-labels": 2, //completely forbids labels. Allow locally if really necessary
+    "no-lone-blocks": 1,
+    "no-loop-func": 2,
+    "no-magic-numbers": [1, {"ignore": [1, -1, 2, -2, 0], "ignoreArrayIndexes": false, "enforceConst": false, "detectObjects": false}],  //enforce const bugs and does not detect variables that later change
+    "no-multi-spaces": 2,
+    "no-multi-str": 2,
+    "no-new-func": 2, //disable it explicitely in the few modules that require functions defined as new Function(...),
+    "no-new-wrappers": 2,
+    "no-new": 2,
+    "no-octal-escape": 2,
+    "no-octal": 2,
+    "no-param-reassign": 0,
+    "no-proto": 0, //disable it explicitely in the few modules that require access to __proto__
+    "no-redeclare": [2, { "builtinGlobals": true }], // @todo check that it does not disable overwriting Promise
+    "no-restricted-properties": 0, //allows forbidding property names
+    "no-return-assign": [2, "except-parens"],
+    "no-script-url": 2,
+    "no-self-assign": 2,
+    "no-self-compare": 2,
+    "no-sequences": 2,
+    "no-throw-literal": 2,
+    "no-unmodified-loop-condition": 1,
+    "no-unused-expressions": 2,
+    "no-unused-labels": 2,
+    "no-useless-call": 2,
+    "no-useless-concat": 2,
+    "no-useless-escape": 2,
+    "no-void": 2,
+    "no-warning-comments": 1,
+    "no-with": 2,
+    "radix": [2, "as-needed"],
+    "vars-on-top": 0,
+    "wrap-iife": [2, "inside"],
+    "yoda": ["error", "never", { "exceptRange": true }],
+    
+    "init-declarations": 0,
+    "no-catch-shadow": 0,
+    "no-delete-var": 2,
+    "no-label-var": 2,
+    "no-restricted-globals": [2], //list globals that should be forbidden
+    "no-shadow-restricted-names": 2,
+    "no-shadow": 0,
+    "no-undef-init": 2,
+    "no-undef": 2,
+    "no-undefined": 0,
+    "no-unused-vars": 2,
+    "no-use-before-define": 2,
+    
+    "array-bracket-spacing": [2, "never"],
+    "block-spacing": [2, "always"],
+    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+    "camelcase": [2, {"properties": "always"}],
+    "comma-dangle": [2, "always-multiline"],
+    "comma-spacing": [2, {"before": false, "after": true}],
+    "comma-style": [2, "last"],
+    "computed-property-spacing": [2, "never"],
+    "consistent-this": [2, "that"],
+    "eol-last": 2,
+    "func-call-spacing": 0,  //bugged at the moment, set back to [2, "never"] later
+    "func-names": 0, //should be [2, "always"] but conflits with ember computeds
+    "func-style": 0,
+    "id-blacklist": 0,
+    "id-length": [2, {"min": 2, "properties": "always", "exceptions": ["i", "j", "k", "u", "v", "w", "x", "y", "z"]}],
+    "id-match": [2, "^([A-Z][A-Z_]*|(_[a-z]|[a-zA-Z])[a-zA-Z0-9]*)$"],
+    "indent": [2, 2, {
+      "SwitchCase": 1
+      //MemberExpression currently bugged
+      //FunctionDeclaration currently bugged
+      //FunctionExpression currently bugged
+    }],
+    "key-spacing": [2, {"beforeColon": false, "afterColon": true, "mode": "strict"}],
+    "keyword-spacing": [2, {"before": true, "after": true}],
+    "line-comment-position": 0,
+    "linebreak-style": [2, "unix"],
+    "lines-around-comment": 0,
+    "lines-around-directive": [0, {"before": "never", "after": "always"}],  //bugged at the moment, set back to 2 later
+    "max-depth": [2, {"max": 7}],
+    "max-len": 0,
+    "max-lines": 0,
+    "max-nested-callbacks": [2, {"max": 7}],
+    "max-params": [2, 5],
+    "max-statements": 0,
+    "multiline-ternary": 0, //can force multiline ternary
+    "new-cap": 2,
+    "new-parens": 2,
+    "newline-after-var": 0,
+    "newline-before-return": 0,
+    "newline-per-chained-call": [2, {"ignoreChainWithDepth": 3}],
+    "no-array-constructor": 2, //disable it explicitely when required
+    "no-bitwise": 2, //disable it explicitely when required
+    "no-continue": 0,
+    "no-inline-comments": 0,
+    "no-lonely-if": 2,
+    "no-mixed-operators": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multiple-empty-lines": 0, //[2, { "max": 2, "maxEOF": 1 }] unsupported in atom
+    "no-negated-condition": 0,
+    "no-nested-ternary": 2,
+    "no-new-object": 2,
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "no-restricted-syntax": 0, //allows to forbid specific syntax features of choice
+    "no-tabs": 0, //bugged at the moment, set back to 2 later
+    "no-ternary": 0,
+    "no-trailing-spaces": [2, {"skipBlankLines": true}],
+    "no-underscore-dangle": 0,
+    "no-unneeded-ternary": 2,
+    "no-whitespace-before-property": 2,
+    "object-curly-newline": [1, {"multiline": true, "minProperties": 2}],
+    "object-curly-spacing": [2, "never"],
+    "object-property-newline": [2, {"allowMultiplePropertiesPerLine": true}],
+    "one-var-declaration-per-line": [2, "initializations"],
+    "one-var": 0,
+    "operator-assignment": 0,
+    "operator-linebreak": [2, "after"],
+    "padded-blocks": [2, "never"],
+    "quote-props": [2, "as-needed", {"keywords": true, "unnecessary": true, "numbers": true}],
+    "quotes": [2, "double", {"avoidEscape": true, "allowTemplateLiterals": true}],
+    "require-jsdoc": [1, {"require": {"FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true}}],
+    "semi-spacing": [2, {"before": false, "after": true}],
+    "semi": [2, "always"],
+    "sort-keys": 0,
+    "sort-vars": 0,
+    "space-before-blocks": [2, "always"],
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "space-in-parens": [2, "never"],
+    "space-infix-ops": 2,
+    "space-unary-ops": 2,
+    "spaced-comment": 0, // @todo to include
+    "unicode-bom": 0,
+    "wrap-regex": 0,
+    
+    "arrow-body-style": [2, "always"],
+    "arrow-parens": [2, "always"],
+    "arrow-spacing": [2, { "before": true, "after": true }],
+    "constructor-super": 2,
+    "generator-star-spacing": [2, {"before": false, "after": true}],
+    "no-class-assign": 2,
+    "no-confusing-arrow": 1,
+    "no-const-assign": 2,
+    "no-dupe-class-members": 2,
+    "no-duplicate-imports": 2,
+    "no-new-symbol": 2,
+    "no-restricted-modules": 0, //add names of modules that are to be forbidden
+    "no-this-before-super": 2,
+    "no-useless-computed-key": 2,
+    "no-useless-constructor": 2,
+    "no-useless-rename": 2,
+    "no-var": 2,
+    "object-shorthand": [2, "methods"],
+    "prefer-arrow-callback": 0,
+    "prefer-const": 2,
+    "prefer-numeric-literals": 0, //later, not yet fully supported
+    "prefer-reflect": 0, //later, not yet fully supported
+    "prefer-rest-params": 0, //conflicts with node ...arguments
+    "prefer-spread": 1, //to be later changed to 2
+    "prefer-template": 1,
+    "require-yield": 2,
+    "rest-spread-spacing": [2, "never"],
+    "sort-imports": 0,
+    "symbol-description": 0, //bugged at the moment
+    "template-curly-spacing": [2, "never"],
+    "yield-star-spacing": [2, "after"]
+    
+    
+    
+    //valid-jsdoc see later
+  }
+}
