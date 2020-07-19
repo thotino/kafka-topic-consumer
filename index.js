@@ -27,6 +27,4 @@ const makeConsumer = require("./lib/makeConsumer");
 //================================================================================
 // module
 //================================================================================
-module.exports = {
-    makeConsumer,
-};
+module.exports = {makeConsumer};
