@@ -10,7 +10,8 @@
         "broker": 0
     },
     "options": {
-        "kafkaHost": "127.0.0.1:9092"
+        "kafkaHost": "127.0.0.1:9092",
+	"requestTimeout": false
     },
     "defaultTopic": "testTopic"
 }
