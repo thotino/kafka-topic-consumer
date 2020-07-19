@@ -11,7 +11,7 @@
     },
     "options": {
         "kafkaHost": "127.0.0.1:9092",
-	"requestTimeout": false
+	    "requestTimeout": false
     },
     "defaultTopic": "testTopic"
 }
